@@ -62,7 +62,7 @@ public class AimBot : ThreadedServiceBase
 
     private bool ProcessMouseMessage(MouseMessages mouseMessage)
     {
-        if (mouseMessage == MouseMessages.WmLButtonUp)
+        if (mouseMessage == MouseMessages.WmRButtonUp)
         {
             if (Monitor.TryEnter(_stateLock))
             {
@@ -73,7 +73,7 @@ public class AimBot : ThreadedServiceBase
             return true;
         }
 
-        if (mouseMessage != MouseMessages.WmLButtonDown) return true;
+        if (mouseMessage != MouseMessages.WmRButtonDown) return true;
 
         if (!GameProcess.IsValid || !GameData.Player.IsAlive() || TriggerBot.IsHotKeyDown() ||
             GameData.Player.IsGrenade()) return true;

@@ -71,6 +71,8 @@ dotnet build
 dotnet run
 ```
 
+# Must be built by using dotned 8
+
 ### Help
 
 If you have issues or have questions, check out the Issues section of the GitHub project page.
